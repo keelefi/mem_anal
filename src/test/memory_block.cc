@@ -69,7 +69,7 @@ TEST_F(memory_block_tests, test_get_range)
 
 TEST_F(memory_block_tests, test_time_since_allocation)
 {
-    auto delta1(std::chrono::seconds(1));
+    auto delta(std::chrono::seconds(1));
 
     EXPECT_EQ(
             block1.get_time_since_allocation(BUILD_STEADY_CLOCK(OFFSET1 + delta)),

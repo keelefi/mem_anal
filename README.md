@@ -1,6 +1,6 @@
 # Memory Analyzer
 
-# Compiling
+## Compiling
 
     mkdir bin
     cd bin

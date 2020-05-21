@@ -27,6 +27,8 @@ void tracer_func(pid_t child_pid)
         throw std::system_error(errno, std::system_category());
     }
     assert(WIFSTOPPED(status));
+
+    std::cout << "child " << child_pid << " exited." << std::endl;
 }
 
 void tracee_func(int argc, char **argv)

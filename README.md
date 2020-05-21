@@ -16,3 +16,11 @@ program.
     cmake ..
     cd ..
     make -Cbin
+
+## Running
+
+The compiled binary is found at `bin/src/mem_anal`. You can run it as follows:
+
+    $ bin/src/mem_anal <program>
+
+You can find the unit test executables at `bin/src/test`.

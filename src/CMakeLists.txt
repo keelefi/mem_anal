@@ -6,11 +6,11 @@ add_library(event_printer_frontend
     event_printer_frontend.cc
     )
 
-add_executable(mem_anal
+add_executable(memory-analyzer
     main.cc
     )
 
-target_link_libraries(mem_anal
+target_link_libraries(memory-analyzer
     gflags
     )
 

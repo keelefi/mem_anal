@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5.1)
 
-project(mem_anal)
+project(memory-analyzer)
 
 enable_testing()
 find_package(GTest REQUIRED)

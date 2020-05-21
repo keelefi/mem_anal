@@ -19,8 +19,8 @@ program.
 
 ## Running
 
-The compiled binary is found at `bin/src/mem_anal`. You can run it as follows:
+The compiled binary is found at `bin/src/memory-analyzer`. You can run it as follows:
 
-    $ bin/src/mem_anal <program>
+    $ bin/src/memory-analyzer <program>
 
 You can find the unit test executables at `bin/src/test`.

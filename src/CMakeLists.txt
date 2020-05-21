@@ -10,4 +10,8 @@ add_executable(mem_anal
     main.cc
     )
 
+target_link_libraries(mem_anal
+    gflags
+    )
+
 add_subdirectory(test)

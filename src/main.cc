@@ -10,13 +10,13 @@
 #include <signal.h>
 #include <unistd.h>
 
-void print_usage(const char *argv0)
+#include <gflags/gflags.h>
+
+void set_usage_string(const char *argv0)
 {
-    std::cout
-            << "usage: "
-            << std::string(argv0)
-            << " <command>"
-            << std::endl;
+    const std::string usage = "usage: " + std::string(argv0) + " <command> [args]";
+
+    gflags::SetUsageMessage(usage);
 }
 
 void tracer_func(pid_t child_pid)
@@ -55,9 +55,13 @@ void tracee_func(int argc, char **argv)
 
 int main(int argc, char **argv)
 {
+    set_usage_string(argv[0]);
+
+    gflags::ParseCommandLineFlags(&argc, &argv, true);
     if (argc < 2)
     {
-        print_usage(argv[0]);
+        std::cout << "error: no command specified" << std::endl;
+        std::cout << gflags::ProgramUsage() <<std::endl;
         return 1;
     }
 
